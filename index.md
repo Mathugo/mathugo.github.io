@@ -25,9 +25,6 @@ My research background spans both computer vision and natural language processin
 - AI interpretability 
 - Adaptive computation methods 
 
-
-
-
 ## Also
 
 - 📈 Training as a certified life & business Coach  [International Coaching Federation](https://coachingfederation.org).
