@@ -3,6 +3,6 @@ main:
   - title: "Projects"
     url:  /activities
   - title: "CV & Publications"
-    url: /cv
+    url: /assets/docs/CV_Ale.pdf
   - title: "Entropy (Blog & Notes)"
     url:  /blog
