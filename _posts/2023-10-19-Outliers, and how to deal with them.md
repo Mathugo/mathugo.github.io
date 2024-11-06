@@ -11,7 +11,7 @@ tags:
     - graphs
     - pytorch geometric
     
-published: true
+published: false
 ---
 An introductory Colab notebook showing how to deal with outliers in simple Machine Learning tasks. 
 
