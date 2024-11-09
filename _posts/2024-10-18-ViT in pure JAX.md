@@ -206,7 +206,7 @@ def self_attention(x, attn_params):
 
     # output projection
     output = jnp.matmul(attention_weights_heads, v)
-    output = output.reshape(n, d_k)
+    output = output.swapaxes(0,1).reshape(n, d_k)
     return output
 ```
 
