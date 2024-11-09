@@ -70,7 +70,7 @@ To initialize these weights at random, we need some random primitives (just like
 a_tensor = torch.randn(tensor_shape)
 ```
 
-you have to explicily allocate a key first and then use it to generate a random number, like this:
+you have to explicitly allocate a key first and then use it to generate a random number, like this:
 
 ```python
 key = random.PRNGKey(42)
@@ -194,9 +194,11 @@ def self_attention(x, attn_params):
     v = jnp.matmul(x, v_w) + v_b
 
     # reshape to have heads
-    q = q.reshape(num_heads, n, head_dim)
-    k = k.reshape(num_heads, n, head_dim)
-    v = v.reshape(num_heads, n, head_dim)
+    # n, (num_heads head_dim) ->  (n, num_heads, headim) -> (num_heads, n, head_dim)
+    q = q.reshape(n, num_heads, head_dim).swapaxes(0, 1)
+    k = k.reshape(n, num_heads, head_dim).swapaxes(0, 1)
+    v = v.reshape(n, num_heads, head_dim).swapaxes(0, 1)
+
 
     # perform multi-head attention
     attention_weights_heads = jnp.matmul(q, jnp.swapaxes(k, -1, -2)) / jnp.sqrt(head_dim)
@@ -524,136 +526,12 @@ for epoch in range(num_epochs):
 
 
     Epoch: 1, Eval acc: 0.25095541401273885
-
-
-    Epoch 3/20: 100%|██████████| 37/37 [00:18<00:00,  2.01it/s, loss=1.9915687]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.06item/s]
-
-
-    Epoch: 2, Eval acc: 0.27923566878980893
-
-
-    Epoch 4/20: 100%|██████████| 37/37 [00:18<00:00,  2.03it/s, loss=1.9971651]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.13item/s]
-
-
-    Epoch: 3, Eval acc: 0.27847133757961784
-
-
-    Epoch 5/20: 100%|██████████| 37/37 [00:17<00:00,  2.08it/s, loss=2.0186331]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.18item/s]
-
-
-    Epoch: 4, Eval acc: 0.2721019108280255
-
-
-    Epoch 6/20: 100%|██████████| 37/37 [00:17<00:00,  2.10it/s, loss=1.965151]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.18item/s]
-
-
-    Epoch: 5, Eval acc: 0.3072611464968153
-
-
-    Epoch 7/20: 100%|██████████| 37/37 [00:17<00:00,  2.10it/s, loss=2.0264215]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.16item/s]
-
-
-    Epoch: 6, Eval acc: 0.3100636942675159
-
-
-    Epoch 8/20: 100%|██████████| 37/37 [00:17<00:00,  2.10it/s, loss=1.8914598]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.16item/s]
-
-
-    Epoch: 7, Eval acc: 0.3228025477707006
-
-
-    Epoch 9/20: 100%|██████████| 37/37 [00:18<00:00,  2.05it/s, loss=1.8803376]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.09item/s]
-
-
-    Epoch: 8, Eval acc: 0.29987261146496813
-
-
-    Epoch 10/20: 100%|██████████| 37/37 [00:17<00:00,  2.07it/s, loss=1.7691764]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.15item/s]
-
-
-    Epoch: 9, Eval acc: 0.32203821656050957
-
-
-    Epoch 11/20: 100%|██████████| 37/37 [00:18<00:00,  2.04it/s, loss=1.7844617]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.13item/s]
-
-
-    Epoch: 10, Eval acc: 0.3370700636942675
-
-
-    Epoch 12/20: 100%|██████████| 37/37 [00:18<00:00,  2.04it/s, loss=1.7681731]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.10item/s]
-
-
-    Epoch: 11, Eval acc: 0.3327388535031847
-
-
-    Epoch 13/20: 100%|██████████| 37/37 [00:18<00:00,  2.03it/s, loss=1.8342143]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.07item/s]
-
-
-    Epoch: 12, Eval acc: 0.32636942675159236
-
-
-    Epoch 14/20: 100%|██████████| 37/37 [00:18<00:00,  2.03it/s, loss=1.765596]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.11item/s]
-
-
-    Epoch: 13, Eval acc: 0.34547770700636943
-
-
-    Epoch 15/20: 100%|██████████| 37/37 [00:18<00:00,  2.00it/s, loss=1.7353936]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.11item/s]
-
-
-    Epoch: 14, Eval acc: 0.34853503184713375
-
-
-    Epoch 16/20: 100%|██████████| 37/37 [00:18<00:00,  2.02it/s, loss=1.7163022]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.11item/s]
-
-
-    Epoch: 15, Eval acc: 0.3510828025477707
-
-
-    Epoch 17/20: 100%|██████████| 37/37 [00:18<00:00,  2.02it/s, loss=1.7733448]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.08item/s]
-
-
-    Epoch: 16, Eval acc: 0.32152866242038214
-
-
-    Epoch 18/20: 100%|██████████| 37/37 [00:18<00:00,  2.04it/s, loss=1.5902878]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.11item/s]
-
-
-    Epoch: 17, Eval acc: 0.34191082802547773
-
-
-    Epoch 19/20: 100%|██████████| 37/37 [00:18<00:00,  2.03it/s, loss=1.7550975]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.13item/s]
-
-
-    Epoch: 18, Eval acc: 0.3385987261146497
-
-
-    Epoch 20/20: 100%|██████████| 37/37 [00:18<00:00,  2.02it/s, loss=1.6626304]
-    Eval: 100%|██████████| 16/16 [00:07<00:00,  2.13item/s]
-
-    Epoch: 19, Eval acc: 0.34343949044585986
+    ...
 
 
     
-
-
 Hope you enjoyed this, please reach me at https://alessiodevoto.github.io/ if you have any questions or find inconsistencies!
+
+Thanks to [Rahil](https://x.com/rahilpandya) for spotting a bug in the attention shapes!
 
 Thanks [Luigi](https://luigisigillo.github.io/) and [Jary](https://jarypomponi.com/) for reviewing this!
