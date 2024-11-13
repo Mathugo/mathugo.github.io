@@ -1,8 +1,8 @@
 # main links
 main:
-  - title: "Projects"
-    url:  /activities
   - title: "Curriculum Vitae"
     url: /assets/docs/CV_Ale.pdf
   - title: "Entropy (Blog & Notes)"
     url:  /blog
+  - title: "Projects"
+    url:  /activities
