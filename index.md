@@ -10,7 +10,7 @@ seo_description: "Alessio Devoto is a PhD researcher in Data Science at La Sapie
 # toc: true
 ---
 
-📌 *<font color=red>I am currently seeking internship opportunities in AI/ML research!</font>* <br>
+📌 <b><font color="orange">I am currently seeking internship opportunities in AI/ML research!</font></b> <br>
 
 ## Research
 
