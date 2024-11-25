@@ -106,7 +106,7 @@ class TPLinear(nn.Module):
 
 ZeRO includes all types of parallelism. More specifically, it impleemnts three possible options:
 
-Certainly. The ZeRO (Zero Redundancy Optimizer) technique offers three progressive levels of memory optimization. Each level increases memory efficiency but also introduces more communication overhead. ZeRO-3 provides the highest memory efficiency but with the most communication. More specifically:
+ZeRO offers three progressive levels of memory optimization. Each level increases memory efficiency but also introduces more communication overhead. ZeRO-3 provides the highest memory efficiency but with the most communication. More specifically:
 
 - ZeRO-1: Optimizer State Partitioning: 
   - Partitions optimizer states (e.g., momentum buffers) across GPUs
