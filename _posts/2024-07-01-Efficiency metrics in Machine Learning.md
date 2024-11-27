@@ -120,7 +120,7 @@ In general, VRAM memory access is the most energy consuming operation, requiring
 ### Peak Activations 
 Peak activations refer to the maximum memory occupied by activations (outputs) produced by neurons in the network during the forward propagation process. At inference time they do not represent a significant bottleneck, because (a) the batch size it typically small and (b) we don't need to store them for backpropagation. During training, the activations represent the most significant bottleneck, because we need to store them for gradient computation to update model weights. 
 
-It is important to point out that only activations of nonlinear layers introduce this problem. Assuming we have a layer $$ a_{i+1} = \mathbf{w_i}^T a_i + b $$. At some point during backprop, we need to compute the gradient of loss with respect to the activations $a_i$. Applying the chain rule, we have that:
+It is important to point out that only activations of nonlinear layers introduce this problem. Assuming we have a layer $$ a_{i+1} = \mathbf{w_i}^T a_i + b $$. At some point during backprop, we need to compute the gradient of loss with respect to the activations $$ a_i $$. Applying the chain rule, we have that:
 
 $$
 \frac{\partial \mathcal{L}}{\partial a_i} = \frac{\partial \mathcal{L}}{\partial a_{i+1}} \frac{\partial a_{i+1}}{\partial a_i} = \frac{\partial \mathcal{L}}{\partial a_{i+1}} \mathbf{w_i}^T
@@ -133,6 +133,13 @@ $$
 $$
 
 where $$ \mathbf{g}(a_i) $$ depends on the activations at previous layer. This means that for a nonlinear layer, we need to store all the activation.
+
+### Model FLOPs utilization
+Model FLOPs utilization was proposed by Google as a metric to capture how well a specific model is using the hardware available. More specifically, it is defined as the ratio between the observed output throughput and the maximum theoretical throughtput. Importantly, the maximum theoretical throughput only accounts for flops (forward and bacward) and not for rematerialization + other computational overhead.
+
+This is an extremely important metric saying a lot about our implementation and training pipeline, as it captures the number of FLOPs a model theoretically utilizes compared to hardware peak FLOPs.
+
+
 
 | Metric                  | explanation               | primarily affects                                | primarily affected by        | hardware independent |
 |------------------------ |---------------- |----------------------------------------|------------------------|--------------|
