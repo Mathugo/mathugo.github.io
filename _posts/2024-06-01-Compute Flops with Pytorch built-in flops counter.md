@@ -9,7 +9,7 @@ tags:
 
 published: true
 ---
-It is becoming more and more common to use FLOPs (floating point operations per second) to measure the computational cost of deep learning models. For Pytorch users, unfortunately, it looks like there is no agreed upon method or library to do that. 
+It is becoming more and more common to use FLOPs (floating point operations) to measure the computational cost of deep learning models. For Pytorch users, unfortunately, it looks like there is no agreed upon method or library to do that. 
 
 After using different github libraries (see references), I found out that Pytorch actually has a built-in function to count flops. 
 
