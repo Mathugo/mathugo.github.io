@@ -11,7 +11,7 @@ published: true
 ---
 It is becoming more and more common to use FLOPs (floating point operations per second) to measure the computational cost of deep learning models. For Pytorch users, unfortunately, it looks like there is no agreed upon method or library to do that. 
 
-After using different github libraries (see references), I found out that Pytorch acutually has a built-in function to count flops. 
+After using different github libraries (see references), I found out that Pytorch actually has a built-in function to count flops. 
 
 ### How to count flops for a Pytorch model
 
@@ -40,7 +40,7 @@ def get_flops(model, inp: Union[torch.Tensor, Tuple], with_backward=False):
     return total_flops
 ```
 
-Say you want to use the snippet to compute the flops for a resnet18, the you would do something like the following.
+Say you want to use the snippet to compute the flops for a resnet18, the you would do something like the following. 
 
 
 ```python
@@ -50,7 +50,7 @@ model = resnet18()
 
 get_flops(model, (1, 3, 224, 224))
 ```
-
+I leave the discussion about whther FLOPs are actually a good way of measuring efficiency to [another blog post](https://alessiodevoto.github.io/Efficiency-metrics-in-Machine-Learning/#macs-and-flops)
 
 #### References
 - [pytorch flops counter](https://github.com/pytorch/pytorch/blob/main/torch/utils/flop_counter.py)
