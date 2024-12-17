@@ -40,9 +40,8 @@ seo_description: "Alessio Devoto is a PhD researcher in Data Science at La Sapie
 </script>
 
 ### Latest Publications
+- [Adaptive Computation Modules: Granular Conditional Computation For Efficient Inference](https://arxiv.org/abs/2312.10193) (AAAI 2025)
 - [A Simple and Effective $$ L_2 $$ Norm-Based Strategy for KV Cache Compression](https://arxiv.org/abs/2406.11430) (EMNLP 2024)
 - [Steering Knowledge Selection Behaviours in LLMs via SAE-Based Representation Engineering](https://arxiv.org/abs/2410.15999) (MINT @ Neurips 2024)
 - [Adaptive Layer Selection for Efficient Vision Transformer Fine-Tuning](https://arxiv.org/abs/2408.08670) (2024)
 - [Are We Done With MMLU?](https://arxiv.org/abs/2406.04127) (2024)
-- [Adaptive Computation Modules: Granular Conditional Computation For Efficient Vision Transformer Inference](https://arxiv.org/abs/2312.10193) (2023)
-- [Enhancing High-Energy Particle Physics Collision Analysis through Graph Data Attribution Techniques](https://arxiv.org/abs/2407.14859), (2024)
