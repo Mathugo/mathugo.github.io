@@ -24,8 +24,8 @@ description              : "Alessio Devoto's PhD Data Science personal website"
 url                      : "https://alessiodevoto.github.io"
 baseurl                  : # "/"
 repository               : "alessiodevoto/alessiodevoto.github.io"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png" (immagine di default per i post)
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+teaser                   : /assets/images/fadingblue.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png" (immagine di default per i post)
+logo                     : /assets/images/fadingblue.jpg # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Alessio Devoto" #overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 210
