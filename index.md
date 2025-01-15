@@ -25,6 +25,7 @@ seo_description: "Alessio Devoto is a PhD researcher in Data Science at La Sapie
 - AI explainability and mechanistic interpretability [[3](https://arxiv.org/abs/2410.15999)]
 - Adaptive computation methods [[2](https://arxiv.org/abs/2408.08670), [4](https://arxiv.org/abs/2312.10193)]
 
+### Blog 
 📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](https://alessiodevoto.github.io/blog/)!
 
 
