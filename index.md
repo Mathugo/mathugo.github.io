@@ -18,17 +18,12 @@ seo_description: "Alessio Devoto is a PhD researcher in Data Science at La Sapie
 
 🌱 Working with [Simone Scardapane](https://www.sscardapane.it) on developing efficient and interpretable machine learning models. 
 
-🏴󠁧󠁢󠁳󠁣󠁴󠁿 Currently a visiting researcher at Edinburgh NLP with [Pasquale Minervini](https://neuralnoise.com/).
+🏴󠁧󠁢󠁳󠁣󠁴󠁿 Visiting researcher at Edinburgh NLP with [Pasquale Minervini](https://neuralnoise.com/).
 
-🔬 My research background spans both computer vision and natural language processing, focusing on making AI systems more efficient and interpretable. My current research interests include:
-- Efficient training and inference for Language and Vision Models [[1](https://arxiv.org/abs/2406.11430),[2](https://arxiv.org/abs/2408.08670)]
-- AI explainability and mechanistic interpretability [[3](https://arxiv.org/abs/2410.15999)]
-- Adaptive computation methods [[2](https://arxiv.org/abs/2408.08670), [4](https://arxiv.org/abs/2312.10193)]
+🔬 My research background spans both computer vision and natural language processing, focusing on making AI systems more efficient and interpretable. My current research interests include Efficient training and inference for Language and Vision Models [[1](https://arxiv.org/abs/2406.11430),[2](https://arxiv.org/abs/2408.08670)], AI interpretability [[3](https://arxiv.org/abs/2410.15999), [4](https://arxiv.org/abs/2501.03432)], Adaptive computation methods [[2](https://arxiv.org/abs/2408.08670), [5](https://arxiv.org/abs/2312.10193)]
 
 ### Blog 
 📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](https://alessiodevoto.github.io/blog/)!
-
-
 
 ## Beyond Research
 
@@ -41,8 +36,11 @@ seo_description: "Alessio Devoto is a PhD researcher in Data Science at La Sapie
 </script>
 
 ### Latest Publications
+This is a summary of my latest publications, feel free to take a look at my [CV](/assets/docs/CV_Ale.pdf) for a more detailed list!
+
 - [Adaptive Computation Modules: Granular Conditional Computation For Efficient Inference](https://arxiv.org/abs/2312.10193) (AAAI 2025)
 - [A Simple and Effective $$ L_2 $$ Norm-Based Strategy for KV Cache Compression](https://arxiv.org/abs/2406.11430) (EMNLP 2024)
 - [Steering Knowledge Selection Behaviours in LLMs via SAE-Based Representation Engineering](https://arxiv.org/abs/2410.15999) (MINT @ Neurips 2024)
+- [Mixture-of-Experts Graph Transformers for Interpretable Particle Collision Detection](https://arxiv.org/abs/2501.03432) (2025)
 - [Adaptive Layer Selection for Efficient Vision Transformer Fine-Tuning](https://arxiv.org/abs/2408.08670) (2024)
 - [Are We Done With MMLU?](https://arxiv.org/abs/2406.04127) (2024)
