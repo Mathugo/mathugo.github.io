@@ -6,9 +6,7 @@ layout: single
 author_profile: true
 ---
 
----
-layout: archive
----
+
 {{ content }}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
