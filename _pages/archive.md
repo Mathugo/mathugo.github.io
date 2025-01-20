@@ -4,6 +4,11 @@ layout: archive
 ---
 
 
+---
+layout: archive
+---
+{{ content }}
+
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% for post in site.posts %}
@@ -14,13 +19,26 @@ layout: archive
         </h2>
         {% assign words = post.content | number_of_words %}
         {% assign reading_time = words | divided_by: 180 | plus: 1 %}
-        <p class="archive__item-meta">
+        <span class="post-meta">
           {{ post.date | date: "%B %d, %Y" }} • {{ reading_time }} min read
-          {% if post.excerpt %}
-            <br>{{ post.excerpt | markdownify | strip_html | truncate: 160 }}
-          {% endif %}
-        </p>
+        </span>
+        {% if post.excerpt %}
+          <p class="archive__item-excerpt">
+            {{ post.excerpt | markdownify | strip_html | truncate: 160 }}
+          </p>
+        {% endif %}
       </div>
     {% endunless %}
   {% endfor %}
 </div>
+
+<style>
+.post-meta {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #666;
+}
+</style>
