@@ -1,6 +1,6 @@
 ---
 permalink: /archive/
-layout: archive
+layout: single
 ---
 
 {{ content }}
