@@ -2,7 +2,7 @@
 permalink: /blog/
 title: "Entropy Blog"
 seo_title: "Alessio Devoto's blog"
-layout: posts
+layout: collection
 author_profile: true
 ---
 
