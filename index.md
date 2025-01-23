@@ -40,7 +40,7 @@ This is a summary of my latest publications, feel free to take a look at my [CV]
 
 - [Adaptive Computation Modules: Granular Conditional Computation For Efficient Inference](https://arxiv.org/abs/2312.10193) (AAAI 2025)
 - [A Simple and Effective $$ L_2 $$ Norm-Based Strategy for KV Cache Compression](https://arxiv.org/abs/2406.11430) (EMNLP 2024)
-- [Steering Knowledge Selection Behaviours in LLMs via SAE-Based Representation Engineering](https://arxiv.org/abs/2410.15999) (MINT @ Neurips 2024)
+- [Steering Knowledge Selection Behaviours in LLMs via SAE-Based Representation Engineering](https://arxiv.org/abs/2410.15999) (NAACL 2025)
 - [Mixture-of-Experts Graph Transformers for Interpretable Particle Collision Detection](https://arxiv.org/abs/2501.03432) (2025)
 - [Adaptive Layer Selection for Efficient Vision Transformer Fine-Tuning](https://arxiv.org/abs/2408.08670) (2024)
-- [Are We Done With MMLU?](https://arxiv.org/abs/2406.04127) (2024)
+- [Are We Done With MMLU?](https://arxiv.org/abs/2406.04127) (NAACL 2025)
