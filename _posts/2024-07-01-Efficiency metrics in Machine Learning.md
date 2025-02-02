@@ -132,12 +132,25 @@ $$
 \frac{\partial \mathcal{L}}{\partial a_i} = \frac{\partial \mathcal{L}}{\partial a_{i+1}} \frac{\partial a_{i+1}}{\partial a_i} = \frac{\partial \mathcal{L}}{\partial a_{i+1}} \mathbf{g}(a_i) 
 $$
 
-where $$ \mathbf{g}(a_i) $$ depends on the activations at previous layer. This means that for a nonlinear layer, we need to store all the activation.
+where $$ \mathbf{g}(a_i) $$ depends on the activations at previous layer. This means that for a nonlinear layer, we need to store all the activations.
 
 ### Model FLOPs utilization
-Model FLOPs utilization was proposed by Google as a metric to capture how well a specific model is using the hardware available. More specifically, it is defined as the ratio between the observed output throughput and the maximum theoretical throughtput. Importantly, the maximum theoretical throughput only accounts for flops (forward and bacward) and not for rematerialization + other computational overhead.
+Model FLOPs utilization was proposed by Google as a metric to capture how well a specific model is using the hardware available. More specifically, it is defined as the ratio between the observed output throughput and the maximum theoretical throughtput. 
+
+$$
+\text{MFU} = \frac{Achieved FLOPs/s}{Theoretical Peak FLOPs/s}
+$$
+
+Importantly, the maximum theoretical throughput only accounts for FLOPs (forward and backward) and not for rematerialization + other computational overhead. A low MFU means that the model is underutilizing the hardware due to inefficiencies such as memory bottlenecks, poor parallelism, or excessive communication overhead.
 
 This is an extremely important metric saying a lot about our implementation and training pipeline, as it captures the number of FLOPs a model theoretically utilizes compared to hardware peak FLOPs.
+
+
+
+
+
+​
+
 
 
 
