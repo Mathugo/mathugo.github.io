@@ -1,10 +1,10 @@
 ---
-title: "Curriculum vitae"
-seo_title: "Alessio Devoto's personal CV"
-permalink: /cv/
-layout: single
-author_profile: true
-toc: true
+#title: "Curriculum vitae"
+#seo_title: "Alessio Devoto's personal CV"
+#permalink: /cv/
+#layout: single
+#author_profile: true
+#toc: true
 ---
 
 
