@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 author_profile: true
-title: Short notes on types of parallelism for training neural networks
+title: Short Notes on Types of Parallelism for Training Neural Networks
 seo_title: A blog post on types of parallelism for training neural networks (distributed data parallel, model parallel, fdsp).
 
 

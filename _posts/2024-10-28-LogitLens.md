@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 author_profile: true
-title: LogitLens from scratch with Hugging Face Transformers
+title: LogitLens From Scratch With Hugging Face Transformers
 seo_title: Implementation of LogitLens explainability method from scratch, without any interpretability libraries.
 
 published: true

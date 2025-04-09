@@ -2,8 +2,8 @@
 layout: single
 classes: wide
 author_profile: true
-title: Visualizing attention maps in pre-trained Vision Transformers from Timm
-seo_title: Vision Transformer (ViT) Attention maps visualization
+title: Visualizing Attention Maps in Pre-trained Vision Transformers (Pytorch)
+seo_title: Visualizing Vision Transformer (ViT) Attention maps with Timm, HuggingFace, Pytorch
 
 published: true
 ---

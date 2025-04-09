@@ -14,7 +14,7 @@ seo_description: "Alessio Devoto is a PhD researcher in Data Science at La Sapie
 
 ## Research
 
-👨‍🎓 I am a [PhD student](https://phd.uniroma1.it/web/ALESSIO-DEVOTO_nP1701081_IT.aspx) in Data Science at La Sapienza, University of Rome. 
+👨‍🎓 I am a [PhD student](https://phd.uniroma1.it/web/ALESSIO-DEVOTO_nP1701081_IT.aspx) in Data Science at Sapienza University of Rome. 
 
 🌱 Working on developing efficient and interpretable machine learning models with [Simone Scardapane](https://www.sscardapane.it).
 
