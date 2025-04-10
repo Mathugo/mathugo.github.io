@@ -20,14 +20,14 @@ seo_description: "Alessio Devoto is a PhD researcher in Data Science at La Sapie
 
 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Visiting researcher at Edinburgh NLP with [Pasquale Minervini](https://neuralnoise.com/).
 
-🔬 My research background spans both computer vision and natural language processing, focusing on making AI systems more efficient and interpretable. My current research interests include Efficient training and inference for Language and Vision Models [[1](https://arxiv.org/abs/2406.11430),[2](https://arxiv.org/abs/2408.08670)], AI interpretability [[3](https://arxiv.org/abs/2410.15999), [4](https://arxiv.org/abs/2501.03432)], Adaptive computation methods [[2](https://arxiv.org/abs/2408.08670), [5](https://arxiv.org/abs/2312.10193)]
+🔬 My research background spans both Computer Vision and Natural Language Processing, focusing on making AI systems more efficient and interpretable. My current research interests include efficient training and inference for Language and Vision Models [[1](https://arxiv.org/abs/2406.11430),[2](https://arxiv.org/abs/2408.08670)], AI Interpretability [[3](https://arxiv.org/abs/2410.15999), [4](https://arxiv.org/abs/2501.03432)], Adaptive & Conditional Computation methods [[2](https://arxiv.org/abs/2408.08670), [5](https://arxiv.org/abs/2312.10193)].
 
 ## Blog 
 📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](https://alessiodevoto.github.io/blog/)!
 
 ## Beyond Research
 
-- 📈 Training as a certified life & business Coach [International Coaching Federation](https://coachingfederation.org)
+- 📈 Training as a certified Life & Business Coach [International Coaching Federation](https://coachingfederation.org)
 - 🇪🇸 Former Erasmus student at [Universidad Politecnica de Valencia](http://www.upv.es/es), Spain
 - 🏛️ I like languages (even [dead ones!](https://www.sssscomic.com/comicpages/196.jpg)). I teach Ancient Greek and Latin to high school and college students. 
 
