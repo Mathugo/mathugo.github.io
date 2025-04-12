@@ -238,6 +238,8 @@ ax = sns.heatmap(np.stack(entropies)[::2],
     
 ![png](https://raw.githubusercontent.com/alessiodevoto/alessiodevoto.github.io/refs/heads/main/assets/images/logitlens/logitlens_small.png)
     
+#### Final consideration
+I recently came across a [nice blog](https://www.soniajoseph.ai/the-logit-lens-can-be-deceptive-if-not-used-properly/) by Sonia Joseph, pointing out that _the logit lens is a convenient way to investigate internal representations. But it can be misleading, as it depends on the layer's basis vector alignment with the output space. Linear probes often show that decent representations can be present in much earlier layers than what the logit lens portrays._
 
 
 Hope you liked this! If you have any suggestions/questios, feel free to drop me a message/email or visit [my page](https://alessiodevoto.github.io/) or my twitter [@devoto_alessio](https://x.com/devoto_alessio).
