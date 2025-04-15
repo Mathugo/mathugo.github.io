@@ -10,8 +10,6 @@ seo_description: "Alessio Devoto is a PhD researcher in Data Science at La Sapie
 # toc: true
 ---
 
-📌 <b><font color="orange">I am currently seeking internship opportunities in AI/ML research!</font></b> <br>
-
 ## Research
 
 👨‍🎓 I am a [PhD student](https://phd.uniroma1.it/web/ALESSIO-DEVOTO_nP1701081_IT.aspx) in Data Science at Sapienza University of Rome. 
