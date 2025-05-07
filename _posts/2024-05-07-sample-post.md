@@ -9,4 +9,4 @@ published: true
 ---
 
 This is just a test
-<iframe src="https://raw.githubusercontent.com/alessiodevoto/alessiodevoto.github.io/refs/heads/main/assets/html/sample_test.html" width="100%" height="600px" frameborder="0"></iframe>
+<iframe src="{{ site.url }}{{ site.baseurl }}/assets/html/sample_test.html" width="100%" height="600px" frameborder="0"></iframe>
