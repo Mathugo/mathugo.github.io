@@ -12,7 +12,7 @@ published: true
 
 ---
 
-I recently realized I have never visualized the embedding space of a large language model (LLM). And while it's perfectly reasonable to go through life without ever seeing the inside of an LLM's vocabulary, I personally find it satisfying to make abstract things more concrete — especially when they're hiding in 4096-dimensional space.
+I recently realized I have never visualized the embedding space of an LLM. And while it's perfectly reasonable to go through life without ever seeing the inside of an LLM's vocabulary, I personally find it satisfying to make abstract things more concrete — especially when they're hiding in 4096-dimensional space.
 
 LLMs are trained on vast corpora of text. To process text, they first tokenize it — splitting it into units ( =tokens) — and then represent each token as a dense vector in a high-dimensional space. These vectors are parameters of the model, learned during training.
 
