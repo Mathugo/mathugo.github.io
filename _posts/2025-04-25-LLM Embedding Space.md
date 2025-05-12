@@ -22,6 +22,8 @@ So if we take a LLaMA 3 model with an embedding size of 4096 and a vocabulary of
 
 But what if we reduce the dimensionality? We’ll lose information, sure, but it might still give us interesting insights.
 
+As usual, you can also <a href="https://colab.research.google.com/drive/1mxFgj9R8s9nJoJUEisQxVPH9LRT4Lm6R" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 ---
 
 ### 🔧 What We'll Do
@@ -158,7 +160,7 @@ fig_full = px.scatter_3d(
     hover_name=full_tokens,
     title="Token Embeddings (Full Vocabulary)"
 )
-fig_full.update_traces(marker=dict(size=2))
+
 fig_full.show()
 ```
 
