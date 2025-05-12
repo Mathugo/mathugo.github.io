@@ -8,7 +8,7 @@ seo_title: What the vocabulary of an LLM (llama, phi-4) looks like if visualized
 published: true
 ---
 
-> **Disclaimer**: *unlike other posts in this blog that actually served some purpose, this is just a random idea I had and am implementing for fun. So if your question is "why should I want to visualize the vocabulary of an LLM?", I don't have an answer * 😄
+> **Disclaimer**: *unlike other posts in this blog that actually served some purpose, this is just a random idea I had and am implementing for fun. So if your question is "why should I want to visualize the vocabulary of an LLM?", I don't have an answer* 😄
 
 ---
 
@@ -18,9 +18,7 @@ LLMs are trained on vast corpora of text. To process text, they first tokenize i
 
 The size of the vocabulary (i.e., how many distinct tokens the model knows) is a hyperparameter. For example, LLaMA 2: \~32,000 tokens, LLaMA 3: \~128,000 tokens, LLaMA 4: up to 200,000 tokens and so on. The token embedding dimension, that is the number of elements of each vector representing a token, (e.g., 4096) is another hyperparameter.
 
-So if we take a LLaMA 3 model with an embedding size of 4096 and a vocabulary of 128k tokens, we’re dealing with 128k points in a  4096-dimensional space — not exactly human-interpretable.
-
-But what if we reduce the dimensionality? We’ll lose information, sure, but it might still give us interesting insights.
+So if we take a LLaMA 3 model with an embedding size of 4096 and a vocabulary of 128k tokens, we’re dealing with 128k points in a  4096-dimensional space — not exactly human-interpretable. But what if we reduce the dimensionality? We’ll lose information, sure, but it might still give us interesting insights. 
 
 As usual, you can also <a href="https://colab.research.google.com/drive/1mxFgj9R8s9nJoJUEisQxVPH9LRT4Lm6R" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
@@ -28,11 +26,9 @@ As usual, you can also <a href="https://colab.research.google.com/drive/1mxFgj9R
 
 ### 🔧 What We'll Do
 
-* Use PCA to project the 4096-dimensional token vectors into 3D space (so we can plot them).
 * Use a small corpus (a slice of Wikipedia) to filter only the tokens that appear in it — otherwise, we’d be visualizing 128k points.
-* Plot token embeddings interactively with Plotly.
-* (Extras below!)
-
+* Use PCA to project the 4096-dimensional token vectors into 3D space (so we can plot them).
+* Plot token embeddings interactively with Plotly, and visualize how an LLM represents the tokens in its latent space!
 
 We'll use the Hugging Face Transformers library to load a LLaMA 2 model, but you can replace it with any other model !
 
@@ -88,6 +84,7 @@ embeddings_3d = reduce_dims.fit_transform(embedding_weights.cpu().detach().float
 
 ---
 
+We tokenize the corpus and count how often each token appears. This helps us later if we want to color or size points by frequency.
 
 ```python
 # Decode each token to its string representation
@@ -121,7 +118,7 @@ And this is the results:
 
 <iframe src="{{ site.url }}{{ site.baseurl }}/assets/html/llama7b.html" width="100%" height="600px" frameborder="0"></iframe>
 
-It's really interesting to surf the plot and explore where learned to position different tokens in the embedding space! For example, on the top right corner there are a lot of words at the top (high `z` coordinate) seem to be names of cities or states!
+It's really interesting to surf the plot and explore where learned to position different tokens in the embedding space! For example, on the top right corner there are a lot of words at the top (high `z` coordinate) seem to be names of cities or states: `Switzerland`, `Connecticut`, `irmingham` and so on ...  
 
 ---
 
