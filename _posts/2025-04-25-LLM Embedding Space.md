@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 author_profile: true
-title: Visualizing the Token Embedding Space of an LLM
+title: Visualizing the Vocabulary of an LLM
 seo_title: What the vocabulary of an LLM (llama, phi-4) looks like if visualized in a plot.
 
 published: true
