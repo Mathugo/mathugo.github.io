@@ -11,12 +11,12 @@ published: true
 
 Lately, diffusion-based language models like [LLaDA](https://arxiv.org/abs/2502.09992) and [MMaDA](https://arxiv.org/abs/2505.15809) have been gaining traction. These aren't your standard left-to-right text generators - they’re bidirectional models trained to fill in missing tokens, more akin to BERT but on steroids. During training, Diffusion Language Models (DLMs) learn to predict `<mask>` tokens given context, effectively learning a denoising task.
 
-In this post, we’ll explore how DLMs work "under the hood" using one of the most elegant interpretability tools out there: **LogitLens**.
+In this post, we’ll explore how DLMs work "under the hood" using one of the most elegant interpretability tools out there: **LogitLens**. The final result will be a plot like this one, that we obtained applying LogitLens to Llama in a previous blog post.
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/logitlens/logitlens_small.png" alt="Llama Logitlens" style="max-width: 100%; width: 90%; display: block; margin: 0 auto;">
 
 As usual, here is the code to reproduce all the plots, just <a href="https://colab.research.google.com/drive/1XfDN_3w4W6Us8mvDQRkehZVdfLJW82VQ" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-
----
 
 ## A Quick Refresher: What Is LogitLens?
 
@@ -47,7 +47,7 @@ example = "The quick brown fox jumps"
 prompt = tokenizer(example, return_tensors="pt").to(device).input_ids
 ```
 
-Now, unlike like GPT-style models that generate one token at a time, diffusion models need to know their target length upfront. It's a bit like being asked to fill in a crossword puzzle, you need to know how many squares you're working with *in advance*. This might sound like a desing problem for open ended generation (it kind of is) but we can circumvent with [various strategies]().
+Now, unlike like GPT-style models that generate one token at a time, diffusion models need to know their target length upfront. It's a bit like being asked to fill in a crossword puzzle, you need to know how many squares you're working with *in advance*. This might sound like a desing problem for open ended generation (it kind of is) but we can circumvent with [various strategies](https://arxiv.org/abs/2503.09573).
 
 To prepare our input, we create a sequence with the original prompt + 8 mask tokens `<mask>`. The `<mask>` tokens are the empty squares of the puzzle the model has to fill in.
 
@@ -65,7 +65,7 @@ tokenizer.convert_ids_to_tokens(x[0], skip_special_tokens=False)
 ```
     ['The', 'quick', 'brown', 'fox', 'jumps', '<|mdmmask|>', '<|mdmmask|>', '<|mdmmask|>', '<|mdmmask|>', '<|mdmmask|>', '<|mdmmask|>', '<|mdmmask|>', '<|mdmmask|>']
 
-It makes sense, we have our prompt + the mask tokens the model will try to fill in. (`prettify_text` is a function I wrote to remove ugly stuff like G instead of blank). 
+It makes sense, we have our prompt + the mask tokens the model will try to fill in. 
 
 ## Running the Model
 Let’s forward the input through the model and grab the predicted tokens:
@@ -112,7 +112,7 @@ print(logitlens[5])
 
 The raw output appears chaotic and difficult to interpret. To better understand the model's internal reasoning process, let's visualize the complete sequence predictions across all transformer layers using a heatmap (full implementation available in the accompanying notebook).
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/logitlensdiff/output_llada.png" alt="Llada Logitlens" style="max-width: 100%; width: 60%;">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/logitlensdiff/output_llada.png" alt="Llada Logitlens" style="max-width: 100%; width: 90%; display: block; margin: 0 auto;">
 
 The bottom row shows the original input tokens, while each ascending row represents successive transformer layers from early to final. The color intensity indicates prediction confidence at each layer, with darker cells representing higher entropy (model uncertainty) and brighter cells showing lower entropy (confident predictions).
  --  that is why brighter cells are only in the final layers.
@@ -123,11 +123,11 @@ Don't forget that we're observing only the first denoising step of what is inher
 
 Let's see what happens if we provide a sequence with a single mask token (just wondering whether the model will be more confident about its prediction when only one guess has to be made.)
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/logitlensdiff/output_llada2.png" alt="Llada Logitlens" style="max-width: 100%; width: 60%;">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/logitlensdiff/output_llada2.png" alt="Llada Logitlens" style="max-width: 100%; width: 90%; display: block; margin: 0 auto;">
 
 It looks like also in this case the final output takes shape at the very final layers!  Let’s repeat the process with Dream (check the Colab for the full code). Here, I will plot fewer layers to make it more clear:
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/logitlensdiff/output_dream.png" alt="Dream Logitlens" style="max-width: 100%; width: 60%;">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/logitlensdiff/output_dream.png" alt="Dream Logitlens" style="max-width: 100%; width: 90%; display: block; margin: 0 auto;">
 
 It's worth to point out the interesting behavior of Dream -- that we didn't observe in the LLada example. It's clear that sometimes Dream can "peek into the future." For instance, it predict tokens related to tokens that haven’t been revealed yet—like seeing the word "Guinea" emerge before "pig" (I'm assuming the sentence "this sentence is about a Guinea pig is not present in the training corpus here). This behavior would be impossible in autoregressive models, where each token only attends to previous ones. With DLMs, all tokens attend to each other from the start, enabling these models to make globally-informed guesses much earlier in the network! 
 
