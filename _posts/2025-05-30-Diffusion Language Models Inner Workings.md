@@ -47,9 +47,9 @@ example = "The quick brown fox jumps"
 prompt = tokenizer(example, return_tensors="pt").to(device).input_ids
 ```
 
-Now, unlike like GPT-style models that generate one token at a time, diffusion models need to know their target length upfront. It's a bit like being asked to fill in a crossword puzzle, you need to know how many squares you're working with *in advance*. This might sound like a desing problem for open ended generation (it kind of is) but we can circumvent with [various strategies](https://arxiv.org/abs/2503.09573).
+Unlike GPT-style models that generate *one token at a time*, diffusion models generate N tokens simultaneously, where N is the number of masked tokens in the input sequence. This means they need to know the amount of masked tokens, that is, their target length, before they begin. We can think of it like filling out a crossword puzzle—you need to know exactly how many squares you're working with before you can start placing letters. This might sound like a design problem for open ended generation (it kind of is) but we can circumvent with [various strategies](https://arxiv.org/abs/2503.09573).
 
-To prepare our input, we create a sequence with the original prompt + 8 mask tokens `<mask>`. The `<mask>` tokens are the empty squares of the puzzle the model has to fill in.
+To prepare our input, we create a sequence with the original prompt + 8 mask tokens `<mask>`. The `<mask>` tokens are the squares of the puzzle the model has to fill in.
 
 
 ```python
@@ -75,16 +75,14 @@ Let’s forward the input through the model and grab the predicted tokens:
 with torch.no_grad():
     outputs = model(x, output_hidden_states=True)
 
-# get the predicted token ids
+# get the predicted tokens and decode them
 predicted_token_ids = outputs["logits"].argmax(-1)
-
-# convert the token ids to tokens
 tokenizer.convert_ids_to_tokens(predicted_token_ids[0], skip_special_tokens=False)
 ```
 
     ['_', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog', '.', '_', '_', 'jumps']
 
-Well, after just one decoding step we were not expecting any special results. Usually, we perform at least N/2 denoising steps, where N is the generated sequence length.However, we see the model has already guessed (correclty) almost all the missing words, but the rest is kind of messy. If you want to get a better prediction, you should perform additional diffusion steps, by remasking some of the input tokens. This is out of the scope for this blog, as we just want to explore the inner representations of the model.
+Well, after just one decoding step we were not expecting any special results. Usually, we perform at least N/2 denoising steps, where N is the generated sequence length. However, we see the model has already guessed (correclty) almost all the missing words. On the other hand, the first token `The` has been replaced by a `_`, which we don't mind as being part of the prompt we would just ignore that during decoding. If you want to get a better prediction, you should perform additional diffusion steps, by remasking some of the input tokens. This is out of the scope for this blog, as we just want to explore the inner representations of the model.
 
 ## Logit Lens
 We just got the predictions fot the *final* output of the model, that is, what comes out of the last layer. What if we apply the model head (our "Lens") to intermediate representations though? Intermediate representations are stored in the `outputs.hidden_states`. We'll have one for each layer of the model and each token of the sequence.
@@ -95,10 +93,10 @@ logitlens = []
 for hidden_state in hidden_states:
     hidden_state = model.model.transformer.ln_f(hidden_state)
     logits = model.model.transformer.ff_out(hidden_state)
-
+    # get predictions for this layer
     predicted_token_ids = logits.argmax(-1)
     predicted_tokens = tokenizer.convert_ids_to_tokens(predicted_token_ids[0], skip_special_tokens=False)
-
+    # store in our logitlens list
     logitlens.append(predicted_tokens)
 ```
 
@@ -114,22 +112,22 @@ The raw output appears chaotic and difficult to interpret. To better understand 
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/logitlensdiff/output_llada.png" alt="Llada Logitlens" style="max-width: 100%; width: 90%; display: block; margin: 0 auto;">
 
-The bottom row shows the original input tokens, while each ascending row represents successive transformer layers from early to final. The color intensity indicates prediction confidence at each layer, with darker cells representing higher entropy (model uncertainty) and brighter cells showing lower entropy (confident predictions).
+The bottom row shows the original input tokens, while each ascending row represents successive transformer layers from early to final. The color intensity indicates entropy ( ~ prediction confidence) at each layer, with darker cells representing higher entropy (model uncertainty) and brighter cells showing lower entropy (confident predictions).
  --  that is why brighter cells are only in the final layers.
 
-The most evident pattern is that coherent, confident predictions only emerge in the final layers, typically around layer 25 and beyond. Throughout the majority of the network depth, the model remains highly uncertain about its predictions, as evidenced by the prevalence of darker cells (and wrong tokens) in earlier layers. This behavior fundamentally differs from autoregressive models like LLaMA or Gemma, where confident predictions typically crystallize much earlier in the network.
+The most evident pattern *is that coherent, confident predictions only emerge in the final layers*, typically around layer 25 and beyond. Throughout the majority of the network depth, the model remains highly uncertain about its predictions, as evidenced by the prevalence of darker cells (and wrong tokens) in earlier layers. This behavior fundamentally differs from autoregressive models like LLaMA or Gemma, where confident predictions typically crystallize much earlier in the network.
 
-Don't forget that we're observing only the first denoising step of what is inherently a multi-step iterative process. The model is designed to gradually refine predictions across multiple iterations, so initial uncertainty is not only expected but necessary for the denoising mechanism to function properly. Also, when compared to LLama's functioning, the complexity increases significantly because unlike autoregressive models that predict one token aftern a sequentially, diffusion models attempt to predict **all tokens simultaneously**. This parallel prediction task is inherently more challenging and requires deeper processing to resolve the interdependencies between different positions in the sequence.
+Why? My guess is that there might be two reasons: first, we're observing only the first denoising step of what is inherently a multi-step iterative process. The model is designed to gradually refine predictions across multiple iterations, so initial uncertainty and errors are not only expected but necessary for the denoising mechanism to function properly. Second, when compared to LLama's functioning, the task complexity increases significantly because unlike autoregressive models that predict one token at a time sequentially, diffusion models attempt to predict **all tokens simultaneously**. This parallel prediction task is inherently more challenging and requires longer processing to resolve the dependencies between different positions in the sequence.
 
 Let's see what happens if we provide a sequence with a single mask token (just wondering whether the model will be more confident about its prediction when only one guess has to be made.)
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/logitlensdiff/output_llada2.png" alt="Llada Logitlens" style="max-width: 100%; width: 90%; display: block; margin: 0 auto;">
 
-It looks like also in this case the final output takes shape at the very final layers!  Let’s repeat the process with Dream (check the Colab for the full code). Here, I will plot fewer layers to make it more clear:
+Also in this case the final output takes shape at the very final layers!  Let’s repeat the process with Dream (check the Colab for the full code). Here, I will plot fewer layers to make it more clear:
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/logitlensdiff/output_dream.png" alt="Dream Logitlens" style="max-width: 100%; width: 90%; display: block; margin: 0 auto;">
 
-It's worth to point out the interesting behavior of Dream -- that we didn't observe in the LLada example. It's clear that sometimes Dream can "peek into the future." For instance, it predict tokens related to tokens that haven’t been revealed yet—like seeing the word "Guinea" emerge before "pig" (I'm assuming the sentence "this sentence is about a Guinea pig is not present in the training corpus here). This behavior would be impossible in autoregressive models, where each token only attends to previous ones. With DLMs, all tokens attend to each other from the start, enabling these models to make globally-informed guesses much earlier in the network! 
+It looks like Dream gets more confident at early layers, but still, correct predictions only emerge very late. In this plot, it's also worth to point out an interesting behavior of Dream -- that we didn't observe in the previous example: sometimes Dream "peeks into the future." to make decisions. In other words, it predicts tokens related to words that come later in the sequence, which would be impossible in autoregressive models, where each token only attends to previous ones. An example is seeing the word "Guinea" emerge before "pig" (I'm assuming the sentence "this sentence is about a Guinea pig" is not present in the training corpus here). With DLMs, all tokens attend to each other from the start, enabling these models to make globally-informed guesses much earlier in the network! 
 
 That's it! If you have feedback or find bugs, feel free to reach out on [Twitter](https://x.com/devoto_alessio) or any [social platform](https://alessiodevoto.github.io/). Thanks for reading!
 
