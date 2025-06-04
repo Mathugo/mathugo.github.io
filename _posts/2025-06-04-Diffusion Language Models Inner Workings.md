@@ -115,11 +115,15 @@ The raw output appears chaotic and difficult to interpret. To better understand 
 The bottom row shows the original input tokens, while each ascending row represents successive transformer layers from early to final. The color intensity indicates entropy ( ~ prediction confidence) at each layer, with darker cells representing higher entropy (model uncertainty) and brighter cells showing lower entropy (confident predictions).
  --  that is why brighter cells are only in the final layers.
 
+## A few thoughts 
+
 The most evident pattern *is that coherent, confident predictions only emerge in the final layers*, typically around layer 25 and beyond. Throughout the majority of the network depth, the model remains highly uncertain about its predictions, as evidenced by the prevalence of darker cells (and wrong tokens) in earlier layers. Additionally, correct tokens only emerge at the very final layer. This behavior fundamentally differs from autoregressive models like LLaMA or Gemma, where confident predictions typically crystallize much earlier in the network.
 
 This behavior might be caused by a lot of factors. [Keeping in mind that logit lens can be deceiving as it depends intermediate layer's basis vector alignment with the output space](https://www.soniajoseph.ai/the-logit-lens-can-be-deceptive-if-not-used-properly/), we can conjecture that the model is performing  a lot of computation that is not interpretable in intermediate layers, and creating semantic representation only in the final ones. This might be a consequence of the bidirectional attention (implies more "mixing" of the tokens hence more overlapped signals?). 
 
 Alos, we should not forget taht we're observing only the first denoising step of what is inherently a multi-step iterative process. The model is designed to gradually refine predictions across multiple iterations, so initial uncertainty and errors are not only expected but necessary for the denoising mechanism to function properly. More precisely, the more `mask` tokens, the harder the task hence the uncertainty for the model. 
+
+## Testing on Dream
 
 Finally, let’s repeat the process with [Dream](https://hkunlp.github.io/blog/2025/dream/) (check the Colab for the full code). Here, I will plot fewer layers to make them more clear:
 
