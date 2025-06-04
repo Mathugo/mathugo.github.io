@@ -16,6 +16,8 @@ seo_description: "Alessio Devoto is a PhD researcher in Data Science at La Sapie
 
 🌱 Working on developing efficient and interpretable machine learning models with [Simone Scardapane](https://www.sscardapane.it).
 
+<img src="https://img.icons8.com/?size=96&id=yqf95864UzeQ&format=png" alt="NVIDIA" width="20" height="20" style="display: inline;"> Deep Learning Intern at Nvidia
+
 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Visiting researcher at Edinburgh NLP with [Pasquale Minervini](https://neuralnoise.com/).
 
 🔬 My research background spans both Computer Vision and Natural Language Processing, focusing on making AI systems more efficient and interpretable. My current research interests include efficient training and inference for Language and Vision Models [[1](https://arxiv.org/abs/2406.11430),[2](https://arxiv.org/abs/2408.08670)], AI Interpretability [[3](https://arxiv.org/abs/2410.15999), [4](https://arxiv.org/abs/2501.03432)], Adaptive & Conditional Computation methods [[2](https://arxiv.org/abs/2408.08670), [5](https://arxiv.org/abs/2312.10193)].
