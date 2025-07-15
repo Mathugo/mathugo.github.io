@@ -133,4 +133,6 @@ It looks like Dream gets more confident at early layers, but still, correct pred
 
 That's it! If you have feedback, want to chat about this topic, or find bugs in the code, feel free to reach out on [Twitter](https://x.com/devoto_alessio) or any [social platform](https://alessiodevoto.github.io/). Thanks for reading!
 
+P.S. I am maintaining a GitHub repo: [Awesome Diffusion Language Models](https://github.com/alessiodevoto/awesome-diffusion-language-models/tree/main). You might find it interesting if you liked this post!
+
 
