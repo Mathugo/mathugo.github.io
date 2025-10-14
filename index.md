@@ -38,7 +38,7 @@ seo_description: "Alessio Devoto is a PhD researcher in Data Science at La Sapie
 ### Latest Publications
 These are some of my latest publications, feel free to take a look at my [CV](/assets/docs/CV_Ale.pdf) or [Google Scholar](https://scholar.google.com/citations?user=er31rp0AAAAJ&hl=en) for a more detailed list!
 
-- [Expected Attention: Compressing the KV Cache by Estimating Attention from Future Queries](https://arxiv.org/abs/2510.00636)
+- [Expected Attention: KV Cache Compression by Estimating Attention from Future Queries](https://arxiv.org/abs/2510.00636)
 - [Adaptive Computation Modules: Granular Conditional Computation For Efficient Inference](https://arxiv.org/abs/2312.10193) (AAAI 2025)
 - [A Simple and Effective $$ L_2 $$ Norm-Based Strategy for KV Cache Compression](https://arxiv.org/abs/2406.11430) (EMNLP 2024)
 - [Q-Filters: Leveraging QK Geometry for Efficient KV Cache Compression](https://arxiv.org/abs/2503.02812)(SLLM @ ICLR 2025)
