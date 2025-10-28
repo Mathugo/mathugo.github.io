@@ -12,9 +12,9 @@ seo_description: "Hugo Math is a PhD researcher in Data Science at BMW Group ass
 
 ## Research
 
-👨‍🎓 I am a [PhD student](https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/team/hugo-math/) in Data Science at BMW Group associated with the [University of Augsburg](https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/) and advised by [Pr. Dr. Rainer Lienhart](https://scholar.google.com/citations?user=eKQPhGgAAAAJ&hl=fr).
+👨‍🎓 I am a [PhD student](https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/team/hugo-math/) in Data Science at [BMW Group](https://www.bmwgroup.com/en.html) associated with the [University of Augsburg](https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/) and advised by [Pr. Dr. Rainer Lienhart](https://scholar.google.com/citations?user=eKQPhGgAAAAJ&hl=fr).
 
-🚗 Working on developing event sequence models alongside causal explaination for fault diagnostic in vehicles at BMW Group.
+🚗 Working on developing event sequence models alongside causal explaination for fault diagnostic in vehicles at [BMW Group](https://www.bmwgroup.com/en.html).
 
 🔬 My research background spans both Natural Language Processing and Causal Discovery, focusing on predicting and explaining occurence of discrete asynchronous events in dynamic systems such as vehicle diagnostics. My current research interests include efficient causal discovery techniques using pretrained Transformer models [[1]](https://www.arxiv.org/abs/2509.23213),[[2]](https://arxiv.org/pdf/2509.19112) and event sequence modeling [[3]](https://ojs.aaai.org/index.php/AAAI/article/view/34138).
 
@@ -41,5 +41,9 @@ These are some of my latest publications, feel free to take a look at my [CV](/a
 - [Towards Practical Multi-label Causal Discovery in High-Dimensional Event Sequences via One-Shot Graph Aggregation](https://arxiv.org/pdf/2509.19112) (SPIGM @ NeuRIPS 2025)
 - [Harnessing Event Sensory Data for Error Pattern Prediction in Vehicles: A Language Model Approach](https://ojs.aaai.org/index.php/AAAI/article/view/34138) (AAAI 2025)
 
-##### Contacts 
+### Patents
+These are some of my successful patents applications
+- TBD
+
+
 I'm active on social media ([Linkedin](https://www.linkedin.com/in/hugo-math-b12250175/)), happy to chat!  
