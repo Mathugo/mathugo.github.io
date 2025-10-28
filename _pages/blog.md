@@ -1,10 +1,9 @@
 ---
 permalink: /blog/
-title: "Entropy Blog"
-seo_title: "Alessio Devoto's blog"
+title: "Café & Neurons"
+seo_title: "Hugo Math's blog"
 layout: archive
 ---
-
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
