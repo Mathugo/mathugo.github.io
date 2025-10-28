@@ -19,9 +19,9 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "default",
 locale                   : "en-US"
 title                    : "Hugo Mah"
 title_separator          : "-"
-subtitle                 : "Hugo's personal website"
+#subtitle                 : "Hugo's personal website"
 name                     : "Hugo Math"
-description              : "Hugo Math's PhD Data Science personal website"
+#description              : "Hugo Math's PhD Data Science personal website"
 url                      : "https://mathugo.github.io"
 baseurl                  : # "/"
 repository               : "mathugo/mathugo.github.io"
@@ -104,7 +104,7 @@ social:
 
 # Site Author
 author:
-  name             : "Hugo Math, PhD"
+  #name             : "Hugo Math, PhD"
   avatar           : "/assets/images/hugo.JPG"
   bio              : "Computer Engineer <br> 
                       PhD candidate in Data Science" 
