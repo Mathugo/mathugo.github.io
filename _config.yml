@@ -11,22 +11,23 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme             : "mmistakes/minimal-mistakes"
+#remote_theme             : "mmistakes/minimal-mistakes"
+theme: "_minimal-mistakes"
 minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "default", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Alessio Devoto"
+title                    : "Hugo Mah"
 title_separator          : "-"
-subtitle                 : # "Alessio's personal website"
-name                     : "Alessio Devoto"
-description              : "Alessio Devoto's PhD Data Science personal website"
-url                      : "https://alessiodevoto.github.io"
+subtitle                 : "Hugo's personal website"
+name                     : "Hugo Math"
+description              : "Hugo Math's PhD Data Science personal website"
+url                      : "https://mathugo.github.io"
 baseurl                  : # "/"
-repository               : "alessiodevoto/alessiodevoto.github.io"
+repository               : "mathugo/mathugo.github.io"
 teaser                   : #/assets/images/fadingblue.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png" (immagine di default per i post)
 logo                     : #/assets/images/fadingblue.jpg # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "Alessio Devoto" #overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Hugo Math" #overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 210
 comments:
@@ -73,7 +74,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification : "dDLCziuVpFsoWUVXwVC9VDkoCSYjI89nDe59V2KFn-g"
+google_site_verification : 
 bing_site_verification   :
 naver_site_verification  :
 yandex_site_verification :
@@ -95,74 +96,59 @@ social:
   links: # An array of links to social media profiles
 
 # Analytics
-analytics:
-  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id          : G-X7J0YBRDBN
-    anonymize_ip         : # true, false (default)
-
+#analytics:
+#  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
+#  google:
+#    tracking_id          : G-X7J0YBRDBN
+#    anonymize_ip         : # true, false (default)
 
 # Site Author
 author:
-  name             : #"Alessio Devoto, PhD"
-  avatar           : "/assets/images/alessio_pp_standard.jpg"
+  name             : "Hugo Math, PhD"
+  avatar           : "/assets/images/hugo.JPG"
   bio              : "Computer Engineer <br> 
-                      PhD candidate in Data Science <br> <br> 
-                      <a href='https://classicalanthology.theclassicslibrary.com/2012/05/30/odyssey-1-1-6/'> 📖 <u> Ἄνδρα μοι ἔννεπε, Μοῦσα, πολύτροπον </u> <a>" 
-  location         : "La Sapienza, University of Rome <br>"
-  email            : 
+                      PhD candidate in Data Science" 
+  location         : "Munich, Milberthofen <br>"
+  email            : "hugo.mathh@gmail.com"
   links:
-    - label: "X"
-      icon: "fab fa-fw fa-square-x-twitter" 
-      url: "https://x.com/devoto_alessio"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:devoto.alessio@gmail.com"
+      url: "mailto:hugo.mathh@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/alessiodevoto"
+      url: "https://github.com/mathugo"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin" 
-      url: "https://www.linkedin.com/in/alessio-devoto/"
+      url: "https://www.linkedin.com/in/hugo-math-b12250175/"
     - label: "Semantic Scholar"
       icon: "fa-solid fa-magnifying-glass"
-      url: "https://www.semanticscholar.org/author/Alessio-Devoto/2172309361"
+      url: "https://www.semanticscholar.org/author/Hugo-Math/2335672365"
     - label: "Google Scholar"
       icon: "fa-brands fa-google-scholar"
-      url: "https://scholar.google.com/citations?user=er31rp0AAAAJ&hl"
-    - label: "Bluesky"
-      icon: "fa-brands fa-bluesky"
-      url: "https://bsky.app/profile/alessiodevoto.bsky.social"
+      url: "https://scholar.google.com/citations?user=POhdE-0AAAAJ&hl=en"
 
     #- label: "Facebook"
       #icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    
 
 # Site Footer
 footer:
   links:
-    - label: "X"
-      icon: "fab fa-fw fa-square-x-twitter" 
-      url: "https://x.com/devoto_alessio"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:devoto.alessio@gmail.com"
+      url: "mailto:hugo.mathh@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/alessiodevoto"
+      url: "https://github.com/mathugo"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin" 
-      url: "https://www.linkedin.com/in/alessio-devoto/"
+      url: "https://www.linkedin.com/in/hugo-math-b12250175/"
     - label: "Semantic Scholar"
       icon: "fa-solid fa-magnifying-glass"
-      url: "https://www.semanticscholar.org/author/Alessio-Devoto/2172309361"
+      url: "https://www.semanticscholar.org/author/Hugo-Math/2335672365"
     - label: "Google Scholar"
       icon: "fa-brands fa-google-scholar"
-      url: "https://scholar.google.com/citations?user=er31rp0AAAAJ&hl"
-    - label: "Bluesky"
-      icon: "fa-brands fa-bluesky"
-      url: "https://bsky.app/profile/alessiodevoto.bsky.social"
+      url: "https://scholar.google.com/citations?user=POhdE-0AAAAJ&hl=en"
       # url:
     # - label: "Facebook"
       # icon: "fab fa-fw fa-facebook-square"
