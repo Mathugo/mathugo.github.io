@@ -5,6 +5,7 @@ seo_title: "Hugo Math's blog"
 layout: archive
 ---
 
+Coming soon
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% for post in site.posts %}
