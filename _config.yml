@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "aqua" # "air", "aqua", "contrast", "dark", "default"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Hugo Mah"
+title                    : "Hugo Math"
 title_separator          : "-"
 #subtitle                 : "Hugo's personal website"
 name                     : "Hugo Math"
@@ -106,9 +106,8 @@ social:
 author:
   #name             : "Hugo Math, PhD"
   avatar           : "/assets/images/hugo.JPG"
-  bio              : "Computer Engineer <br> 
-                      PhD candidate in Data Science" 
-  location         : "Munich, Milberthofen <br>"
+  bio              : "PhD Candidate in Data Science" 
+  location         : "Munich, Milberthofen"
   email            : "hugo.mathh@gmail.com"
   links:
     - label: "Email"
