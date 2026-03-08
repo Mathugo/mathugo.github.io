@@ -3,10 +3,9 @@ layout: single
 classes: wide
 author_profile: true
 title: ''
-seo_title: "Hugo Math - PhD Researcher in Sequence Modeling & Causal Discovery"
-excerpt: "AI Researcher specializing in Sequence Modeling & Causal Discovery"
-seo_description: "Hugo Math is a PhD researcher in Data Science at BMW Group associated in Augsburg University, focusing on sequence modeling and causal discovery for high-dimensional event sequences"
-
+seo_title: "Hugo Math - Sequence Modeling & Causal AI Researcher"
+excerpt: "Applied AI Researcher specializing in Sequence Modeling & Causal Discovery"
+seo_description: "Hugo Math is a PhD researcher in Data Science at BMW Group and Augsburg University, specializing in causal discovery, sequence modeling, and neuro-symbolic LLMs for high-dimensional event data."
 # toc: true
 ---
 
@@ -16,34 +15,31 @@ seo_description: "Hugo Math is a PhD researcher in Data Science at BMW Group ass
 
 🚗 Working on developing event sequence models alongside causal explaination for fault diagnostic in vehicles at [BMW Group](https://www.bmwgroup.com/en.html).
 
-🔬 My research background spans both Natural Language Processing and Causal Discovery, focusing on predicting and explaining occurence of discrete asynchronous events in dynamic systems such as vehicle diagnostics. My current research interests include efficient causal discovery techniques using pretrained Transformer models [[1]](https://www.arxiv.org/abs/2509.23213),[[2]](https://arxiv.org/pdf/2509.19112) and event sequence modeling [[3]](https://ojs.aaai.org/index.php/AAAI/article/view/34138).
+🔬 **Research Focus:** I bridge the gap between complex event sequences and causal reasoning to build reliable, explainable AI systems. My work focuses on **Causal Discovery**, **Large Language Models (LLMs)**, and **Neuro-Symbolic Logic** applied to large-scale, high-dimensional vehicle diagnostic data.
 
-I'm open to relocate for a full time job/PhD intership in 2026.
+💻 **Tech Stack:** PyTorch, Transformers, LLMs, Causal Discovery, Graph Representation Learning.
+
+📢 **I am actively seeking full-time Research Scientist/Machine Learning Engineer roles for 2026. Open to global relocation.**
 
 ## News
+- **March 2026:** Two papers accepted to **ICLR 2026** workshops! I will be presenting my work on multimodal vehicle diagnostics and neuro-symbolic LLMs virtually.
+- **Sept 2025:** Two papers accepted to **NeurIPS 2025** workshops (SPIGM & CauScien) in San Diego, USA. 
+- **Feb 2025:** Presented my work on event sensory data and language models at **AAAI 2025**.
 
-- September., 2025. Super happy to announce that two of my paper have been accepted to NeurIPS workshops on Structured Probabilistic & Generative Methods (SPIGM) and Uncovering Causality in Science (CauScien) ! I will be in San Diego, USA in December and present the two papers during the poster sessions. Don't hesitate to reach out ! 
-- February., 2025. Thrilled to have presented during the poster session my first paper titled "Harnessing Event Sensory Data for Error Pattern Detection in Vehicles" at AAAI 2025 ! I had great discussions with other researcher regarding how to model spatio-temporal data, which are common in many areas such as the automotive industry.
+## Selected Publications
+*(For a full list, please see my [Google Scholar](https://scholar.google.com/citations?user=POhdE-0AAAAJ&hl=en))*
+
+- **[Context-Informed Sequence Classification: A Multimodal Approach to Vehicle Diagnostics](https://openreview.net/forum?id=G4iAE9xOpb)** *TSALM @ ICLR 2026* | Hugo Math, Rainer Lienhart
+- **[Neuro-Symbolic Rule Discovery: Empowering LLMs with Causality for Vehicle Diagnostics](https://openreview.net/forum?id=M5ZszfsJxm)** *Logical Reasoning @ ICLR 2026* | Hugo Math, Julian Lorenz, Rainer Lienhart
+- **[One-Shot Multi-Label Causal Discovery in High-Dimensional Event Sequences](https://www.arxiv.org/abs/2509.23213)** *CauScien @ NeurIPS 2025* | Hugo Math, Robin Schön, Rainer Lienhart
+- **[Harnessing Event Sensory Data for Error Pattern Prediction in Vehicles: A Language Model Approach](https://ojs.aaai.org/index.php/AAAI/article/view/34138)** *AAAI 2025* | Hugo Math, Rainer Lienhart, Robin Schön
 
 ## Beyond Research
-
-- 🇸🇪 I spent an amazing semester as Erasmus student at [Chalmers University of Technology](https://www.chalmers.se/en), in Gothenburg, Sweden.
-- 💡 Former auto-entrepreneur, with multiple years of freelance mission in the semiconductor industry to automate wafer inspections using computer vision models.
+- 💡 **Industry Experience:** Multiple years as a freelance auto-entrepreneur engineering computer vision models to automate semiconductor wafer inspections.
+- 🇸🇪 **Global Perspective:** Former Erasmus student at [Chalmers University of Technology](https://www.chalmers.se/en), Sweden.
 
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
-
-### Latest Publications
-These are some of my latest publications, feel free to take a look at my [CV](/assets/docs/CV_2025_PhD.pdf) or [Google Scholar](https://scholar.google.com/citations?user=POhdE-0AAAAJ&hl=en) for a more detailed list!
-
-- [One-Shot Multi-Label Causal Discovery in High-Dimensional Event Sequences](https://www.arxiv.org/abs/2509.23213) (CauScien @ NeuRIPS 2025)
-- [Towards Practical Multi-label Causal Discovery in High-Dimensional Event Sequences via One-Shot Graph Aggregation](https://arxiv.org/pdf/2509.19112) (SPIGM @ NeuRIPS 2025)
-- [Harnessing Event Sensory Data for Error Pattern Prediction in Vehicles: A Language Model Approach](https://ojs.aaai.org/index.php/AAAI/article/view/34138) (AAAI 2025)
-
-### Patents
-These are some of my successful patents applications
-- TBD
-
 
 I'm active on social media ([Linkedin](https://www.linkedin.com/in/hugo-math-b12250175/)), happy to chat!  
