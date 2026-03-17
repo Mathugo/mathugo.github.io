@@ -17,6 +17,10 @@ seo_description: "Hugo Math is a PhD researcher in Data Science at BMW Group and
 
 🔬 **Research Focus:** I bridge the gap between complex event sequences and causal reasoning to build reliable, explainable AI systems. My work focuses on **Causal Discovery**, **Large Language Models (LLMs)**, and **Neuro-Symbolic Logic** applied to large-scale, high-dimensional vehicle diagnostic data.
 
+⭐️ **Open Source Software:**
+
+- 📦 **[`seq2cause`](https://github.com/Mathugo/seq2cause)**: A Python package for unifying population and sample-level causal discovery in high-dimensional event sequences via neural autoregressive density estimation.
+
 💻 **Tech Stack:** PyTorch, Transformers, LLMs, Causal Discovery, Graph Representation Learning.
 
 📢 **I am actively seeking full-time Research Scientist/Machine Learning Engineer roles for 2026. Open to global relocation.**
