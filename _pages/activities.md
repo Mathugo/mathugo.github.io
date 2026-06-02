@@ -7,7 +7,12 @@ seo_title: "Hugo Math activities and projects"
 toc: false
 ---
 
-Coming soon
+## Academic Service & Distinctions
+
+| Year | Role | Venue |
+|------|------|-------|
+| 2026 | 🏅 Gold Reviewer ([letter](/assets/docs/ICML_2026_Gold_Reviewer.pdf)) | ICML 2026 |
+| 2026 | Reviewer | NeurIPS 2026 |
 
 
 

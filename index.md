@@ -4,7 +4,7 @@ classes: wide
 author_profile: true
 title: ''
 seo_title: "Hugo Math - Applied AI Researcher in Causal AI & Agentic Systems"
-excerpt: "Applied AI Researcher specializing in Causal Discovery, Agentic Systems & Context Management"
+excerpt: "Applied AI Researcher specializing in Sequence Modeling, Causal Discovery and Agentic Systems"
 seo_description: "Hugo Math is an Applied AI Researcher at BMW Group working on causal discovery, 
 agentic data interpretation, and multi-modal context management for enterprise AI systems."
 ---
@@ -27,7 +27,6 @@ vehicle diagnostics.
 - **Causal foundation models** for tabular and structured enterprise data
 - **Multi-modal context management** for long-horizon agentic conversations
 - **Agentic tool-selection** and planning under uncertainty
-- **Neuro-symbolic reasoning** with LLMs
 
 ⭐️ **Open Source:**
 
@@ -41,6 +40,9 @@ via neural autoregressive density estimation.
 
 ## News
 
+- **June 2026:** Paper accepted to **ICML 2026** workshop (SPIGM) — *Your Autoregressive Model Already Reveals the Causal Graph*.
+- **June 2026:** 🏅 Awarded **ICML 2026 Gold Reviewer** distinction — [signed letter](/assets/docs/ICML_2026_Gold_Reviewer.pdf).
+- **June 2026:** Reviewer for **NeurIPS 2026**.
 - **March 2026:** Two papers accepted to **ICLR 2026** workshops — presenting work on 
 multimodal vehicle diagnostics and neuro-symbolic LLMs.
 - **Sept 2025:** Two papers accepted to **NeurIPS 2025** workshops (SPIGM & CauScien), 
@@ -56,6 +58,7 @@ for vehicle diagnostics.
 
 | Paper | Venue | Authors |
 |---|---|---|
+| [Your Autoregressive Model Already Reveals the Causal Graph](https://openreview.net/forum?id=Q66hINx9fA) | SPIGM @ ICML 2026 | Hugo Math, Rainer Lienhart |
 | [Context-Informed Sequence Classification: A Multimodal Approach to Vehicle Diagnostics](https://openreview.net/forum?id=G4iAE9xOpb) | TSALM @ ICLR 2026 | Hugo Math, Rainer Lienhart |
 | [Neuro-Symbolic Rule Discovery: Empowering LLMs with Causality for Vehicle Diagnostics](https://openreview.net/forum?id=M5ZszfsJxm) | Logical Reasoning @ ICLR 2026 | Hugo Math, Julian Lorenz, Rainer Lienhart |
 | [One-Shot Multi-Label Causal Discovery in High-Dimensional Event Sequences](https://www.arxiv.org/abs/2509.23213) | CauScien @ NeurIPS 2025 | Hugo Math, Robin Schön, Rainer Lienhart |
