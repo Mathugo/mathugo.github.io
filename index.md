@@ -10,12 +10,9 @@ excerpt: "Senior Agentic AI Engineer @ BMW Group · PhD candidate (thesis under 
 
 # Hugo Math, PhD
 
-**Senior Agentic AI Engineer @ BMW Group · PhD candidate (thesis under correction, defense upcoming)**
+**Senior Agentic AI Engineer @ BMW Group · PhD candidate**
 
 **Causal Discovery · Event Sequence Modeling · Foundation Models · Agentic AI**
-
-Published at AAAI · NeurIPS · ICLR · ICML
-
 ---
 
 ## Research
