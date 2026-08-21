@@ -25,6 +25,7 @@ name                     : "Hugo Math"
 url                      : "https://mathugo.github.io"
 baseurl                  : # "/"
 repository               : "mathugo/mathugo.github.io"
+description              : "Hugo Math, PhD candidate and Senior Agentic AI Engineer at BMW Group, researching causal discovery, event sequence foundation models, and agentic AI systems. Published at AAAI, NeurIPS, ICLR, and ICML."
 teaser                   : #/assets/images/fadingblue.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png" (immagine di default per i post)
 logo                     : #/assets/images/fadingblue.jpg # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Hugo Math" #overrides the website title displayed in the masthead, use " " for no title
@@ -91,9 +92,13 @@ og_image                 : /assets/images/bulb.png
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : Person
+  name                   : "Hugo Math"
   links: # An array of links to social media profiles
+    - "https://github.com/mathugo"
+    - "https://www.linkedin.com/in/hugo-math-b12250175/"
+    - "https://scholar.google.com/citations?user=POhdE-0AAAAJ&hl=en"
+    - "https://www.semanticscholar.org/author/Hugo-Math/2335672365"
 
 # Analytics
 #analytics:
@@ -106,7 +111,7 @@ social:
 author:
   #name             : "Hugo Math, PhD"
   avatar           : "/assets/images/hugo.JPG"
-  bio              : "PhD Candidate in Data Science" 
+  bio              : "Senior Agentic AI Engineer @ BMW Group · PhD candidate (thesis under correction)"
   location         : "Munich, Milberthofen"
   email            : "hugo.mathh@gmail.com"
   links:
