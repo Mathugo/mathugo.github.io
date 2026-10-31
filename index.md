@@ -12,7 +12,6 @@ excerpt: "Senior Agentic AI Engineer @ BMW Group · PhD candidate (thesis under 
 
 **Senior Agentic AI Engineer @ BMW Group · PhD candidate**
 
-**Causal Discovery · Event Sequence Modeling · Foundation Models · Agentic AI**
 ---
 
 ## Research
