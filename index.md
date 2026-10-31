@@ -59,6 +59,7 @@ via neural autoregressive density estimation.
 ---
 
 ## News
+- **October 2026:** Our paper **[DES-JEPA: Learning a Shared Vocabulary in High-Dimensional Discrete Event Sequences](https://openreview.net/forum?id=jXNdptAt8G)** was accepted to the **NeurIPS 2026 Workshop on Foundation Models for Temporal Systems: From Forecasting to World Modeling** (with Maximilian Forstenhäusler and Christos Anagnostopoulos). I will be attending **NeurIPS 2026** in Sydney, Australia!
 
 - 🎓 **[2026]** PhD thesis under correction — defense scheduled in October 2026.
 - 🏅 **[2026]** Awarded **ICML 2026 Gold Reviewer** distinction — [signed letter](/assets/docs/ICML_2026_Gold_Reviewer.pdf).
