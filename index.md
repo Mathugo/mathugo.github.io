@@ -5,7 +5,7 @@ author_profile: true
 title: ''
 seo_title: "Hugo Math, PhD - Research Scientist in Causal Discovery, Time Series & Foundation Models"
 seo_description: "Hugo Math is a Research Scientist and PhD candidate specializing in causal discovery, event sequence and time series modeling, foundation models, and agentic AI. Senior Agentic AI Engineer at BMW Group. Published at AAAI, NeurIPS, ICLR, and ICML."
-excerpt: "Senior Agentic AI Engineer @ BMW Group · PhD candidate (thesis under correction, defense upcoming)"
+excerpt: "Senior Agentic AI Engineer @ BMW Group · PhD candidate (thesis under correction, defense passed)"
 ---
 
 # Hugo Math, PhD
