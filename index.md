@@ -27,12 +27,6 @@ supervised by [Prof. Dr. Rainer Lienhart](https://scholar.google.com/citations?u
 defended my PhD thesis in October 2026) focuses on scalable causal discovery and 
 sequence modeling in high-dimensional discrete event data.
 
-Alongside my engineering role, I conduct independent research on two parallel directions:
-- **Foundation models for discrete event sequences** — autoregressive models that learn 
-  generative priors over complex event streams
-- **Causal foundation models** — in-context causal discovery from event sequences using 
-  autoregressive architectures ([`seq2cause`](https://github.com/Mathugo/seq2cause), arXiv 2026)
-
 I have authored 8 publications across AAAI, NeurIPS, ICLR, ICML, filed 6 patents 
 at the German patent offices, and serve as a reviewer at NeurIPS and ICML 2026.
 
@@ -59,7 +53,7 @@ via neural autoregressive density estimation.
 ---
 
 ## News
-- **October 2026:** Our paper **[DES-JEPA: Learning a Shared Vocabulary in High-Dimensional Discrete Event Sequences](https://openreview.net/forum?id=jXNdptAt8G)** was accepted to the **NeurIPS 2026 Workshop on Foundation Models for Temporal Systems: From Forecasting to World Modeling** (with Maximilian Forstenhäusler and Christos Anagnostopoulos). I will be attending **NeurIPS 2026** in Sydney, Australia!
+- 📢 **[2026]**: Our paper **[DES-JEPA: Learning a Shared Vocabulary in High-Dimensional Discrete Event Sequences](https://openreview.net/forum?id=jXNdptAt8G)** was accepted to the **NeurIPS 2026 Workshop (FMTS)** (with Maximilian Forstenhäusler and Christos Anagnostopoulos). I will be attending **NeurIPS 2026** in Sydney, Australia!
 
 - 🎓 **[2026]** Successfully defended my PhD thesis in October 2026.
 - 🏅 **[2026]** Awarded **ICML 2026 Gold Reviewer** distinction — [signed letter](/assets/docs/ICML_2026_Gold_Reviewer.pdf).
@@ -80,6 +74,9 @@ systems for procurement AI.
 ## Publications
 
 *(Full list on [Google Scholar](https://scholar.google.com/citations?user=POhdE-0AAAAJ&hl=en))*
+
+**[DES-JEPA: Learning a Shared Vocabulary in High-Dimensional Discrete Event Sequences](https://openreview.net/forum?id=jXNdptAt8G)**  
+H. Math, M. Forstenhäusler, C. Anagnostopoulos · *NeurIPS 2026 Workshop on Foundation Models for Temporal Systems: From Forecasting to World Modeling* · [2026]
 
 **[Your Autoregressive Model Already Reveals the Causal Graph](https://openreview.net/forum?id=Q66hINx9fA)**  
 H. Math, R. Lienhart · *ICML 2026 Workshop SPIGM: Structured Probabilistic Inference & Generative Models* · [2026]
