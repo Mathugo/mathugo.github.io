@@ -24,7 +24,7 @@ deploy large-scale multi-agent systems for predictive maintenance and supplier i
 
 My PhD ([University of Augsburg](https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/), 
 supervised by [Prof. Dr. Rainer Lienhart](https://scholar.google.com/citations?user=eKQPhGgAAAAJ&hl=fr), 
-thesis under correction, defense scheduled in October 2026) focuses on scalable causal discovery and 
+defended my PhD thesis in October 2026) focuses on scalable causal discovery and 
 sequence modeling in high-dimensional discrete event data.
 
 Alongside my engineering role, I conduct independent research on two parallel directions:
@@ -61,7 +61,7 @@ via neural autoregressive density estimation.
 ## News
 - **October 2026:** Our paper **[DES-JEPA: Learning a Shared Vocabulary in High-Dimensional Discrete Event Sequences](https://openreview.net/forum?id=jXNdptAt8G)** was accepted to the **NeurIPS 2026 Workshop on Foundation Models for Temporal Systems: From Forecasting to World Modeling** (with Maximilian Forstenhäusler and Christos Anagnostopoulos). I will be attending **NeurIPS 2026** in Sydney, Australia!
 
-- 🎓 **[2026]** PhD thesis under correction — defense scheduled in October 2026.
+- 🎓 **[2026]** Successfully defended my PhD thesis in October 2026.
 - 🏅 **[2026]** Awarded **ICML 2026 Gold Reviewer** distinction — [signed letter](/assets/docs/ICML_2026_Gold_Reviewer.pdf).
 - 📄 **[2026]** New preprint: *Learning to Predict, Discover, and Reason in High-Dimensional 
 Discrete Event Sequences* ([arXiv:2603.16313](https://arxiv.org/abs/2603.16313)).
